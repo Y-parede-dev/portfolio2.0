@@ -1,0 +1,61 @@
+.container-skills{
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    border: solid red;
+}
+.back-img-skills {
+    position: absolute;
+    transform: rotate(-152deg) rotateX(180deg);
+    top: -190px;
+    right: -720px;
+    z-index: -1;
+}
+.skills-content{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    align-items: center;
+    div.skills-content-meta{
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .skills-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: ' html . css . js . sql'
+                             ' . ex . node . react .';
+        grid-gap: 40px 0;
+        li.skills-list-items{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            img.logo-techno {
+                width: 100%;
+                padding: 15px 0;
+            }
+        }
+        .html{
+            grid-area: html;
+
+        }.css{
+            grid-area: css;
+        }.js{
+            grid-area: js;
+        }.sql{
+            grid-area: sql;
+        }.express{
+            grid-area: ex;
+        }.node{
+            grid-area: node;
+        }.react{
+            grid-area: react;
+        }
+    }
+}
+.img-circle {
+    right: -45px;
+}

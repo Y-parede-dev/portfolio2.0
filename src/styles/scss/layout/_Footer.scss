@@ -1,0 +1,24 @@
+footer.container{
+    display: block;
+    position: relative;
+    z-index: 1;
+    //height: 100vh;
+    width: 100%;
+    padding: 0;
+    border: solid pink;
+    img{
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        position: absolute;
+    }
+    div.meta-footer {
+        position: absolute;
+        padding: 112.5px 0;
+        bottom: 0px;
+        width: 100%;
+        background: $color-secondary;
+    }
+}

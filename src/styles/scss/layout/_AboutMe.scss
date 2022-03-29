@@ -1,0 +1,38 @@
+.img-about-up {
+    z-index: -1;
+    transform: rotate(27deg);
+    position: absolute;
+    left: -413px;
+    top: -401px;   
+}
+.about-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+    h2.title-art{
+        font-size: 32px;
+        font-weight: 700;
+        color: $color-h2;
+    }
+    div.about-txt{
+        padding-left: 50px;
+    }
+    button.about-btn{
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+        padding: 20px;
+        border-radius: 8px;
+        border: none;
+        background: $color-secondary;
+        color: white;
+    }
+    .image-design-back {
+        position: absolute;
+        left: -45px;
+        top: -34px;
+        z-index: -1;
+    }
+    
+}
