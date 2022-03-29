@@ -19,14 +19,18 @@
         padding-left: 50px;
     }
     button.about-btn{
-        font-size: 16px;
         text-transform: capitalize;
         font-weight: 500;
-        padding: 20px;
         border-radius: 8px;
         border: none;
         background: $color-secondary;
         color: white;
+        height: 40px;
+        a{
+            font-size: 16px;
+            padding: 20px;
+            
+        }
     }
     .image-design-back {
         position: absolute;

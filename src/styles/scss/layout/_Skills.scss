@@ -2,7 +2,6 @@
     z-index: 1;
     position: relative;
     height: 100vh;
-    border: solid red;
 }
 .back-img-skills {
     position: absolute;
@@ -38,21 +37,26 @@
                 padding: 15px 0;
             }
         }
-        .html{
+
+        .FaHtml5{
             grid-area: html;
 
-        }.css{
+        }.FaCss3Alt{
             grid-area: css;
-        }.js{
+        }.FaJsSquare{
             grid-area: js;
-        }.sql{
+        }.FaReact{
             grid-area: sql;
-        }.express{
+        }.FaNodeJs{
             grid-area: ex;
-        }.node{
+        }.SiExpress{
             grid-area: node;
-        }.react{
+        }.SiMysql{
             grid-area: react;
+        }
+        svg.logo{
+            font-size: 3.5rem;
+            fill: $color-secondary
         }
     }
 }

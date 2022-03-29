@@ -11,7 +11,7 @@ import { SiMysql } from 'react-icons/si';
 
 export const TechnoArr = []
 const tec = ["FaHtml5", "FaCss3Alt", "FaJsSquare", "FaReact", "FaNodeJs", "SiExpress", "SiMysql"]
-const logo =[FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, SiExpress, SiMysql]
+const logo = [FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, SiExpress, SiMysql]
 let id = 0;
 tec.map((e)=>{
     id++

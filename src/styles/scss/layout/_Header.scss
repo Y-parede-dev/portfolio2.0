@@ -5,7 +5,6 @@
     left: 0;
     right: 0;
     height: 100vh;
-    border: solid blue;
     padding: 0 150px;
     width: calc(100% - 300px);
 }
@@ -96,11 +95,8 @@ nav.test{
             color: $color-third;
             width: fit-content;
             height: 111px;
-            //background: url('../../../assets/backDesign/NavFocus.svg') no-repeat;
-            //background-position: -160px center ;
-
+           
             transition: 300ms ease-in ;
-            // opacity: .2;
             &::after{
                 content:url('../../../assets/backDesign/NavFocus.svg');
                 position: absolute;
@@ -113,18 +109,13 @@ nav.test{
                 cursor: pointer;
                 font-weight: bold;
                 color: #F44336;
-                //padding: 0 20px 0 0;
                 justify-content: center;
-               // background-position:center;
-
                 transition: 300ms ease-in-out ;
                 opacity: 1;
                 &::after{
                     left: -35px;
                     transition: 300ms ease-in-out ;
-
                 }
-                
             }
         }
     }
@@ -132,8 +123,6 @@ nav.test{
 .container-data-h{
     height: calc(100%);
     display: flex;
-    //align-items: center;
-    //justify-content: start;
 }
 .data-start{
     display: grid;

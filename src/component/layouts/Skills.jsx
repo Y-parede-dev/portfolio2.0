@@ -12,21 +12,21 @@ import { SiExpress } from 'react-icons/si';
 import { SiMysql } from 'react-icons/si';
 
 export const Skills = (props) => {
-    const html={name:'HTML', logo: FaHtml5}
-    const css = {name:'CSS', logo: FaCss3Alt}
-    const js = {name:'JavaScript', logo: FaJsSquare}
-    const react = {name:'ReactJs', logo: FaReact}
-    const node = {name:'NodeJs', logo: FaNodeJs}
-    const express={name:'ExpressJs', logo: SiExpress}
-    const mySql={name:'SQL', logo: SiMysql}
-    const PushQuick = (array,...props) => {
-        array.push(...props)
-    }
-    const libLogo =  []
-    PushQuick(libLogo,html, css, js, react, node, express, mySql)
-    TechnoArr.map((e)=>{
-        console.log(e)
-    })
+    // const html={name:'HTML', logo: FaHtml5}
+    // const css = {name:'CSS', logo: FaCss3Alt}
+    // const js = {name:'JavaScript', logo: FaJsSquare}
+    // const react = {name:'ReactJs', logo: FaReact}
+    // const node = {name:'NodeJs', logo: FaNodeJs}
+    // const express={name:'ExpressJs', logo: SiExpress}
+    // const mySql={name:'SQL', logo: SiMysql}
+    // const PushQuick = (array,...props) => {
+    //     array.push(...props)
+    // }
+    // const libLogo =  []
+    // PushQuick(libLogo,html, css, js, react, node, express, mySql)
+    // TechnoArr.map((e)=>{
+    //     console.log(e)
+    // })
     useEffect(()=>{
         slideTo('.skills-content-meta', "right",.1)
     },[])
@@ -56,7 +56,7 @@ export const Skills = (props) => {
                         <ul className="skills-list">
                         {TechnoArr.map((e)=>(
                             <li key={`${e.id}`} className={`skills-list-items ${e.className}`}>
-                                <e.logo />
+                                <e.logo className={`logo logo-${e.name}`}/>
                                 {/* {libLogo.map((er)=>(
                                    <div  className="techno-logo" key={`techno logo ${e.id} - ${er.name}`}>
                                         {e.name === er.name ?
@@ -68,7 +68,6 @@ export const Skills = (props) => {
                                    </div>     
 
                                 ))} */}
-                                {e.name}
                             </li>
                         ))}
                         </ul>

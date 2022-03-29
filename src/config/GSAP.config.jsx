@@ -54,34 +54,52 @@ export const slideTo = (elt, direction='left', delay, duration) => {
     )
     return null
 }
-export const slidetoCarouselLeft = (elt,  count) => {
+export const slidetoCarouselLeft = (elt,  count, arr, setL, setR) => {
    let X = -561
-    gsap.fromTo(elt, {
-        x: X * (count-1),
-        opacity:0.5
-    },{
-        x:X*count,
-        delay:0.1,
-        duration:.6,
-        opacity:1,
-        ease: "back.inOut(1)"
-    })
+   alert(count)
+   if(count===arr.length-1){
+       setR(false)
+       
+   }
+   if(count<arr.length){
+    
+       gsap.fromTo(elt, {
+           x: X * (count - 1),
+           opacity:0.5
+       },{
+           x:X*count,
+           delay:0.1,
+           duration:.6,
+           opacity:1,
+           ease: "back.inOut(1)"
+       })
+   }
     
 }
-export const slidetoCarouselRight = (elt,  count) => {
+export const slidetoCarouselRight = (elt,  count, arr, setL, setR) => {
     let X = -561
-     gsap.fromTo(elt, {
-        x: X * (count+1),
-        opacity:0.5
-     },{
-        x:X*count,
-        delay:0.1,
-        duration:.6,
-        opacity:1,
-        ease: "back.inOut(1)"
+   alert(count)
 
-     })
-     console.log(X/(count+1))
+    if(count===arr.length-2){
+       setR(true)
+
+    }
+    if(count>=0){
+
+        gsap.fromTo(elt, {
+           x: X * (count +1),
+           opacity:0.5
+        },{
+           x:X*count,
+           delay:0.1,
+           duration:.6,
+           opacity:1,
+           ease: "back.inOut(1)"
+   
+        })
+    }else{
+        alert(count)
+    }
  }
 export const scrollToPage = (elt)=>{
     gsap.to(window, {duration: 2, scrollTo: `${elt}`})

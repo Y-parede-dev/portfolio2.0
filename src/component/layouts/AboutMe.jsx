@@ -2,6 +2,7 @@ import developpeurImg from "../../assets/images/TEST/dev.png"
 import circlePink from "../../assets/images/TEST/circle.svg"
 import { useEffect } from "react"
 import { slideTo } from "../../config/GSAP.config"
+import cv from "../../assets/download/CV.pdf"
 export const AboutMe = (props) => {
 
     useEffect(()=>{
@@ -21,9 +22,9 @@ export const AboutMe = (props) => {
                     <img src={developpeurImg} className="image-about-developpeur" alt="développeur" />
                 </div>
                 <div className="about-txt content-art">
-                    <h2 className="about-title title-art">About me</h2>
-                    <p className="about-text txt-art">An inquisitive Computer Science Engineering student, skilled in leadership, seeking to leverage solid development skills with focus on collaboration, communication and passion.</p>
-                    <button className="about-btn">télécharger CV</button>
+                    <h2 className="about-title title-art">À propos de moi</h2>
+                    <p className="about-text txt-art">Un développeur web curieux, passionné, cherchant à tirer parti de solides compétences en développement en mettant l'accent sur la collaboration, la communication et la passion.</p>
+                    <button className="about-btn"><a href={cv} download>télécharger CV</a></button>
 
                 </div>
             </div>
