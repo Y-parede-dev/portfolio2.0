@@ -26,4 +26,3 @@ Toutes les images présentent sur le site sont ma propriéter.
 ### `Les backgrounds`
 
 Toute la partie Background du site (design) sont la propriéter du [Designer de la maquette](https://www.figma.com/@akhiltj)
-
