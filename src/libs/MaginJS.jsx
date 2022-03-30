@@ -7,12 +7,15 @@ export class Techno {
     }
 }
 export class Project {
-    constructor(id, name, url, img, description, techno){
+    constructor(id, name, url, img, description, techno, code, site, codeUrl=null){
         this.id = id;
         this.name = name;
         this.url = url;
         this.img = img;
         this.description = description;
-        this.techno = [techno]
+        this.techno = [techno];
+        this.code = code;
+        this.site = site;
+        this.codeUrl = codeUrl;
     }
 }

@@ -4,87 +4,27 @@ import { useEffect, useState } from "react"
 import{AiOutlineArrowRight} from 'react-icons/ai'
 
 export const Works = (props) => {
-    const[arrLeft, setArrLeft] = useState(true)
+    const[arrLeft, setArrLeft] = useState(false)
     const[arrRight, setArrRight] = useState(true)
-    // const [count, setCount] = useState(1)
+    const [save, setSave] = useState(0)
 
     let count = 0
     let countMax = ProjectArr.length-1
     const btnT = (direction) => {
         if(direction==='right'){
-            count++
-            // if(count===1){
-            //     setArrLeft(true)
-    
-            // }else{
-            //     setArrLeft(false)
-
-            // }
-            //alert(count)
-
-            // alert(count)
-            // if(count===ProjectArr.length-1){
-            //     setArrRight(false)
-
-            // }
-            
-            slidetoCarouselLeft('.elt',  count, ProjectArr, setArrLeft, setArrRight)
+            if(save<countMax){
+                setSave(save+1)
+            }
+            slidetoCarouselLeft('.elt',  save, ProjectArr, setArrLeft, setArrRight)
         }
         if(direction === "left"){
-            countMax--
-           
-            // alert(count)
-            count--
-            
-        
-            // if(countMax===0){
-            //     setArrLeft(false)
-    
-            // }else{
-            //     setArrLeft(true)
-
-            // }
-            // if(countMax===ProjectArr.length-1){
-            //     setArrRight(false)
-
-            // }
-            // if(countMax===ProjectArr.length-2){
-            //     setArrRight(true)
-
-            // }
-            // else{
-            //     setArrRight(true)
-
-            // }
-         
-            slidetoCarouselRight('.elt', count, ProjectArr, setArrLeft, setArrRight)
+            setSave(save-1)
+            slidetoCarouselRight('.elt', save, ProjectArr, setArrLeft, setArrRight)
             console.log(`up ${count}`)
         }
        
     }
-    // // useEffect(()=>{
-    // //     if(count>=0 && count <= countMax){
-    // //         setArrRight(true)
-    // //     }
-    // //     return(()=>{
-    // //         setArrRight(true)
-    // //     })
-        
-    // // },[count])
-    // // useEffect(()=>{
-    // //     if(count===0){
-    // //         setArrLeft(false)
-
-    // //     }else{
-    // //         setArrLeft(true)
-
-    // //     }
-        
-    // //     return(()=>{
-    // //         setArrLeft(true)
-    // //     })
-        
-    // },[count])
+   
     useEffect(()=>{
         slideTo(".content-txt-work", 'left')
     },[])
@@ -133,6 +73,17 @@ export const Works = (props) => {
                                                 ))}
                                             </ul>
                                         </div>
+                                        {e.code?
+                                        <div className="site code site-code">
+                                            <div className="code">
+                                                <a href="" target="_blank"></a>
+                                            </div>
+                                            <div className="site">
+                                                <a href="" target="_blank"></a>
+                                            </div>
+                                        </div>
+                                    :""}
+                                        
                                     </div>
                                 ))}
                             </div>    

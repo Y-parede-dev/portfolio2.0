@@ -6,7 +6,6 @@ import { Works } from './layouts/Works'
 import { Footer } from './layouts/Footer'
 import { useRef, useState, useEffect } from 'react'
 import circlePink from "../assets/images/TEST/circle.svg"
-
 import { gsap} from 'gsap'
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

@@ -56,41 +56,45 @@ export const slideTo = (elt, direction='left', delay, duration) => {
 }
 export const slidetoCarouselLeft = (elt,  count, arr, setL, setR) => {
    let X = -561
-   alert(count)
-   if(count===arr.length-1){
-       setR(false)
-       
-   }
-   if(count<arr.length){
-    
-       gsap.fromTo(elt, {
-           x: X * (count - 1),
-           opacity:0.5
-       },{
-           x:X*count,
-           delay:0.1,
-           duration:.6,
-           opacity:1,
-           ease: "back.inOut(1)"
-       })
-   }
-    
+    if(count>=0){
+        if(count===arr.length-2){
+            setR(false)
+            
+        }
+        if(count===0){
+            setL(true)
+        }
+        
+        gsap.fromTo(elt, {
+            x: X * (count),
+            opacity:0.5
+        },{
+            x:X*(count+1),
+            delay:0.1,
+            duration:.6,
+            opacity:1,
+            ease: "back.inOut(1)"
+        })
+    }
+        
 }
 export const slidetoCarouselRight = (elt,  count, arr, setL, setR) => {
     let X = -561
-   alert(count)
 
-    if(count===arr.length-2){
-       setR(true)
-
-    }
-    if(count>=0){
+   if(count>=0){
+       if(count===1){
+           setL(false)
+       }
+        if(count<=arr.length-1){
+           setR(true)
+    
+        }
 
         gsap.fromTo(elt, {
-           x: X * (count +1),
+           x: X * (count),
            opacity:0.5
         },{
-           x:X*count,
+           x:X*(count-1),
            delay:0.1,
            duration:.6,
            opacity:1,
