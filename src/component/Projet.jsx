@@ -44,6 +44,6 @@ const PortFolio = new Project(
     ['html', 'css', 'js','react', 'firebase'],
     true,
     true,
-    'https://'
+    'https://github.com/Y-parede-dev/portfolio2.0'
 )
 export const ProjectArr = [Plantapik, Magin, Therapies, PortFolio]
