@@ -11,12 +11,12 @@
     z-index: -1;
 }
 .skills-content{
-    display: flex;
-    flex-direction: row-reverse;
-    height: 100%;
-    align-items: center;
+    grid-template-areas: 'txt'
+                         'pic';
     div.skills-content-meta{
-        padding-right: 50px;
+        grid-area: txt;
+        padding-right: 0px;
+        padding: 0 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -55,11 +55,76 @@
             grid-area: react;
         }
         svg.logo{
-            font-size: 3.5rem;
+            font-size: 2rem;
             fill: $color-secondary
         }
     }
 }
 .img-circle {
     right: -45px;
+}
+@media screen and (min-width:800px) {
+    div.container{
+
+        div.skills-content{
+            grid-template-areas: 'txt pic';
+            div.skills-content-meta{
+                grid-area: txt;
+                padding-right: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .skills-list {
+               
+                grid-gap: 40px 0;
+                li.skills-list-items{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    img.logo-techno {
+                        width: 100%;
+                        padding: 15px 0;
+                    }
+                }
+                svg.logo{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width:1000px) {
+    .container{
+
+        div.skills-content{
+            
+            div.skills-content-meta{
+                grid-area: txt;
+                padding-right: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .skills-list {
+               
+                grid-gap: 40px 0;
+                li.skills-list-items{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    img.logo-techno {
+                        width: 100%;
+                        padding: 15px 0;
+                    }
+                }        
+                svg.logo{
+                }
+            }
+        }
+    }
+    
 }

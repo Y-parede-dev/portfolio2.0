@@ -1,12 +1,13 @@
 # Portfolio de PAREDE Yoan
 
-Ce projet a pour but de me présenter.
+Ce projet à pour but de me présenter.
 
 ## Technologies utilisé
 
 - ReactJs
 - HTML
 - CSS
+- JS
 - FireBase
 - Git
 

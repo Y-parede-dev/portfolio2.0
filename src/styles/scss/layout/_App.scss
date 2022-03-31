@@ -1,12 +1,45 @@
-.App {
-  height: 100%;
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  text-align: center;
-  background: $color-primary;
-  overflow-x: hidden;
+@media screen and (max-width:800px) {
+  .App {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: $color-primary;
+    overflow-x: hidden;
+  }
+  .App-link {
+    color: #61dafb;
+  }
 }
-.App-link {
-  color: #61dafb;
+
+@media screen and (min-width:800px) {
+  .App {
+    height: 100%;
+   // width: 95%;
+    // max-width: 80%;
+    margin: auto;
+    text-align: center;
+    background: $color-primary;
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width:1000px) {
+  .App {
+   
+    width: 90%;
+    margin-right: 0;
+  }
+  
+}
+@media screen and (min-width:1500px) {
+  .App {
+    width: 74%;
+    margin-right: auto;
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width:2000px) {
+  .App {
+    max-width: 1920px;
+  }
 }
