@@ -46,14 +46,14 @@ export const Works = (props) => {
     },[widthSlide])
     useEffect(()=>{
         const timer = setTimeout(()=>{
-            setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
+            setWidthSlide(document.getElementById(`img-carou`).offsetWidth )
             
-        },0) //<-- 0 millisecondes ....
+        },100) //<-- 0 millisecondes ....
         return(()=>{
             clearTimeout(timer)
         })
 
-    },[widthSlide, save])
+    },[widthSlide])
     useEffect(()=>{
         slideTo(".content-txt-work", 'left')
     },[])
@@ -68,8 +68,8 @@ export const Works = (props) => {
     return(
         <div className="container-works container">
             <div className="content-work">
-                <div className="carrousels">
                  <img src={props.circlePink} className='img-circle-W img-article-circle ' alt='circle design'/>
+                <div className="carrousels">
                     <div id="img-carou" className="carou-img carou-cust">
                         {ProjectArr.map((e)=>(                        
                             <div id={`elt-${e.id}`} key={`${e.id}-img`} className={`content-img elt `}>
