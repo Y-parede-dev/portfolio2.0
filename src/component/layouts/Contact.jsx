@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
-//const {REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID} = process.env
+const {REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID} = process.env
 export const Contact = () => {
     const formRef = useRef()
     const [name, setName] = useState("")
@@ -20,13 +20,13 @@ export const Contact = () => {
             message:message,
             to_name:"Yoan"
         }
-        // emailjs.send(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, formInit, REACT_APP_EMAILJS_USER_ID)
-        //   .then((result) => {
-        //       resetInit()
-        //   }, (error) => {
-        //       alert(error.text)
-        //       console.log(error.text);
-        //   });
+        emailjs.send(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, formInit, REACT_APP_EMAILJS_USER_ID)
+          .then((result) => {
+              resetInit()
+          }, (error) => {
+              alert(error.text)
+              console.log(error.text);
+          });
       }
     return (
         <div className='ctc'>
