@@ -45,8 +45,14 @@ export const Works = (props) => {
         }
     },[])
     useEffect(()=>{
-        setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
-        console.log(widthSlide)
+        const timer = setTimeout(()=>{
+            setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
+            
+        },0) //<-- 0 millisecondes ....
+        return(()=>{
+            clearTimeout(timer)
+        })
+
     },[widthSlide, save])
     useEffect(()=>{
         slideTo(".content-txt-work", 'left')

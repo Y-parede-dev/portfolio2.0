@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
-import emailjs, {init} from '@emailjs/browser'
-// import dotenv from 'dotenv'
+import emailjs from '@emailjs/browser'
 
 const {REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID} = process.env
 export const Contact = () => {
@@ -8,7 +7,11 @@ export const Contact = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
-    
+    const resetInit = ()=>{
+        setName('')
+        setEmail('')
+        setMessage('')
+    }
     const sendEmail = (e) => {
         e.preventDefault();
         const formInit = {
@@ -19,8 +22,9 @@ export const Contact = () => {
         }
         emailjs.send(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, formInit, REACT_APP_EMAILJS_USER_ID)
           .then((result) => {
-              console.log(result.text);
+              resetInit()
           }, (error) => {
+              alert(error.text)
               console.log(error.text);
           });
       }
@@ -31,16 +35,16 @@ export const Contact = () => {
                 I would like to hear from you.</h3>
             <form ref={formRef} onSubmit={sendEmail} className="contact-form">
                 <div className="form-elt">
-                    <input onChange={(e)=>setName(e.target.value)} id='Name' type="text" name="user_name" />
-                    <label className='lbl lbl-nom' htmlFor='Name'>Name</label>
+                    <input onChange={(e)=>setName(e.target.value)} id='Name' type="text" name="user_name" required/>
+                    <label className='lbl lbl-nom' htmlFor='Name'>{name<1?"Name":""}</label>
                 </div>
                 <div className="form-elt">
-                    <input onChange={(e)=>setEmail(e.target.value)} id='Name' type="email" name="user_email" />
-                    <label className='lbl lbl-email' htmlFor='Email'>Email</label>
+                    <input onChange={(e)=>setEmail(e.target.value)} id='Name' type="email" name="user_email" required/>
+                    <label className='lbl lbl-email' htmlFor='Email'>{email<1?"Email":""}</label>
                 </div>
                 <div className="form-elt">
-                    <textarea onChange={(e)=>setMessage(e.target.value)} id='Message' name="message" />
-                    <label className='lbl lbl-mess' htmlFor='Message'>Message</label>
+                    <textarea onChange={(e)=>setMessage(e.target.value)} id='Message' name="message" required minLength={5}/>
+                    <label className='lbl lbl-mess' htmlFor='Message'>{message<1?'Message':''}</label>
                 </div>
                 <input title="cliquer pour m'envoyé un email" className='btn-form' type="submit" value="Envoyer Message" />
             </form>

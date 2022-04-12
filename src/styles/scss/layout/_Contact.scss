@@ -15,11 +15,12 @@
                          'form';
     .tilte-contact{
         grid-area: title;
-    }.drop-me{
+    }
+    .drop-me{
         margin: auto;
 
         grid-area: drop;
-        font-size: 38px;
+        font-size: 19px;
         font-weight: 600;
         text-align: left;
     }

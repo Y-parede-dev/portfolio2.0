@@ -1,6 +1,5 @@
 import {Routes, Route, BrowserRouter as Router} from "react-router-dom"
 import {App} from "../component/App"
-import {Header} from "../component/layouts/Header"
 
 export const RouterReact = ()=>{
     return(

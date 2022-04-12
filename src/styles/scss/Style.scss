@@ -85,7 +85,7 @@ blockquote {
     align-items: center;
 
   }
- 
+
 }
 h2.title-art{
   font-size: 24px;
@@ -101,7 +101,7 @@ p.txt-art {
   color: $color-secondary;
 }
 .image-content {
-    position: relative;       
+    position: relative;
 }
 .img-article-circle {
     top: -34px;
@@ -112,14 +112,14 @@ p.txt-art {
   text-align: left;
   background: $color-primary;
 }
-/*regalge taille images*/
+/*reglage taille images*/
 .img-all{
-  max-width: 55vw;
+  max-width: 72vw;
 
 }
 @media screen and (min-width:500px) {
   .container {
-    
+
     div.content-cust {
       height: calc(100vh - 84px);
     // height: 100vh;
@@ -127,7 +127,7 @@ p.txt-art {
     max-width: 80%;
   }
 }
-  
+
 }
 @media screen and (min-width:800px) {
   .container {
@@ -161,9 +161,9 @@ p.txt-art {
   }
   .img-all{
     max-width: 100%;
-  
+
   }
- 
+
 }
 @media screen and (min-width:1500px) {
   .container {
