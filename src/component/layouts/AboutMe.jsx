@@ -9,7 +9,7 @@ export const AboutMe = (props) => {
         setSeize(document.querySelector('#t').offsetWidth)
         slideTo(".about-txt", 'left',seize)
         
-    },[])
+    },[seize])
     useEffect(()=>{
         slideTo('.image-design-back',"top", .5)
     },[])
@@ -30,7 +30,7 @@ export const AboutMe = (props) => {
 
                 </div>
             </div>
-            <img className="img-about-up" src={props.backgroundImg} />
+            <img alt='Fond' className="img-about-up" src={props.backgroundImg} />
         </div>
     )
 }

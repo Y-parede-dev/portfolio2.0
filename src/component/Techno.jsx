@@ -18,8 +18,10 @@ tec.map((e)=>{
             if(e === er.name){
                 return er
             } 
+            return
         })
     )
     TechnoArr.push(el)
+    return
 })
 // console.log(TechnoArr)

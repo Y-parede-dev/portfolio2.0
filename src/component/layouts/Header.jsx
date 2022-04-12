@@ -10,17 +10,17 @@ export const Header = (props) => {
     
     useEffect(()=>{
         if(window.innerWidth>props.seizeChange && window.pageYOffset > 250){
-            setClassN('test')
+            setClassN('mobile')
         }
         window.onscroll=()=>{
             if(window.pageYOffset > 250){
-                setClassN('test')
+                setClassN('mobile')
             }else{
                 setClassN('')
             }
         }
         return (()=>setClassN(''))
-    },[window.onscroll])
+    },[props.seizeChange])
     
     return(
         <header className='header-principal' id="header">

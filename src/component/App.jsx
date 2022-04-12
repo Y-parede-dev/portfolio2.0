@@ -22,7 +22,7 @@ export const App =()=>{
             setOnMobile(true)
         }
         return(()=>setOnMobile(false))
-    },[window.onresize])
+    },[])
 
     return(
         <div className="App">

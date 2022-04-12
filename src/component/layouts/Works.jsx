@@ -1,6 +1,6 @@
 import { ProjectArr } from "../Projet"
 import { slideTo, slidetoCarouselLeft, slidetoCarouselRight } from "../../config/GSAP.config"
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import{AiFillGithub, AiOutlineArrowRight} from 'react-icons/ai'
 import{CgWebsite} from 'react-icons/cg'
 
@@ -43,7 +43,7 @@ export const Works = (props) => {
                 ele[i].style.maxWidth= widthSlide+'px'
             }
         }
-    },[])
+    },[widthSlide])
     useEffect(()=>{
         const timer = setTimeout(()=>{
             setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
@@ -86,7 +86,7 @@ export const Works = (props) => {
                                     :""
                                 }
                                     </div>
-                                <img id={`img-carou-${e.id}`} className="img-project img-all" src={e.img}/>
+                                <img alt="mes projets" id={`img-carou-${e.id}`} className="img-project img-all" src={e.img}/>
                                  
                             </div>
                         ))}
@@ -112,7 +112,8 @@ export const Works = (props) => {
                                                 title={`Lien vers le gitHub de ${e.name}`} 
                                                 className="web-gh-icon"
                                                 href={e.codeUrl}
-                                                target="_blank">
+                                                target="_blank"
+                                                rel="noreferrer">
                                                     <AiFillGithub alt='lien vers site git hub - lien vers le code'/>
                                             </a>
                                         </div>
@@ -121,7 +122,9 @@ export const Works = (props) => {
                                                 title={`Lien vers le site de ${e.name}`} 
                                                 className="web-site-icon" 
                                                 href={`${e.url}`} 
-                                                target="_blank"><CgWebsite alt='lien vers site web'/></a>
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                    <CgWebsite alt='lien vers site web'/></a>
                                         </div>
                                     </div>
                                 :<div className="site-code">
@@ -130,7 +133,8 @@ export const Works = (props) => {
                                             title={`Lien vers le site de ${e.name}`}
                                             className="web-site-icon"
                                             href={`${e.url}`}
-                                            target="_blank">
+                                            target="_blank"
+                                            rel="noreferrer">
                                                 <CgWebsite alt='lien vers site web'/>
                                         </a>
                                     </div>
