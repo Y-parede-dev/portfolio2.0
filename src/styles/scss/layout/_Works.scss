@@ -5,12 +5,61 @@
     margin: auto;
     div.content-work {
         height: 100%;
-        margin: auto;
+        margin: 0 auto;
         max-width: 100%;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        .carou{
+            height: 100%;
+            display: flex;
+            width: 100%;
+            .carou-content{
+                position: relative;
+                width: 100%;
+                display: flex;
+            }
+            .list-techno-carou{
+                display: flex;
+                padding-left: 5px;
+                .tec{
+                    background: $color-third-b;
+                    color: white;
+                    font-size: 9px;
+                    margin-right: 8px;
+                    border-radius: 3px;
+                    display: flex;
+                    height: 36px;
+                    text-transform: uppercase;
+                    align-items: center;
+                    padding: 0 7px;
+    
+                }
+            }.site-code{
+                display: flex;
+                width: 88.9px;
+                margin-top: 6px;
+                padding-left: 5px;
+                justify-content: space-between;
+    
+                .web-gh-icon, .web-site-icon{
+                    svg{
+                        color: $color-third-b;
+                        fill: $color-third-b;
+                        height: 36.3px;
+                        width: 36.3px;
+                    }
+                    svg:hover{
+                        transform: scale(1.2);
+                        color: $color-secondary;
+                        fill: $color-secondary;
+                    }
+    
+                }
+            }
+        }
     }
 }
+
 .carrousels{
     position: relative;
     display: grid;
@@ -18,98 +67,89 @@
     grid-template-areas: 'txt'
                          'img';
     width: 100%;
-    padding: 34px 0;
+    padding: 2px 0;
     height: fit-content;
-    overflow: hidden;
+    // overflow: hidden;
     align-items: center;
 
-    img.img-circle-W{
-        top: 0px;
-    }
+
     .carou-cust{
         display: flex;
         overflow: hidden;
-        max-width: 561px;
     }
-    .elt {
+    .elt, .count {
         display: flex;
         width: fit-content;
         flex: 1 0 100%;
         justify-content: center;
         transform: translateX(0px);
+        max-width: calc(100vw - 50px);
+        .max-img{
+            position: relative;
+        }
+    }
+    .count{
+        display: none;
+        justify-content: initial;
     }
 }
-.content-txt-work {
-    flex-direction: column;
+.carou-barre{
+    position: relative;
 }
+.test{
+    display: flex;
+    position: relative;
+}
+.barre-content{
+    display: none;
+    // position: absolute;
+    margin: 6px;
+    max-width: 116px;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    background: $color-third;
+    display: flex;
+    align-items: baseline;
+    overflow: hidden;
+}
+.barre{
+    transform: translateX(-100px);
+    background: transparent;
+    height: 100%;
+    transition:  500ms ease-in;
+}
+.barre-active{
+    transform: translateX(0);
+
+    background: black;
+    border-top: 2px solid black;
+}
+img.img-circle-W.img-article-circle {
+    
+    display: none;
+}
+
+
 .title-project{
     font-size: 24px;
     font-weight: 600;
     color: #F44336;
     text-transform: capitalize;
 }
-.content-txt-work{
+.content-txt-work-container {
+    grid-area: txt;
+   
+}
+.content-txt-work {
+    flex-direction: column;
     display: flex;
-    // max-width: 561px;
 }
-
-.content-work{
-    .carou{
-        height: 100%;
-        display: flex;
-        width: 100%;
-        .carou-content{
-            position: relative;
-            width: 100%;
-            display: flex;
-        }
-        .list-techno-carou{
-            display: none; //ADEL
-            // display: flex;
-            padding-left: 5px;
-            .tec{
-                background: #928A97;
-                color: white;
-                font-size: 14px;
-                margin-right: 20px;
-                border-radius: 3px;
-                display: flex;
-                height: 40px;
-                text-transform: uppercase;
-                align-items: center;
-                padding: 0 16px;
-
-            }
-        }.site-code{
-            display: flex;
-            width: 88.9px;
-            margin-top: 48px;
-            padding-left: 5px;
-            justify-content: space-between;
-
-            .web-gh-icon, .web-site-icon{
-                svg{
-                    color: $color-third;
-                    fill: $color-third;
-                    height: 36.3px;
-                    width: 36.3px;
-                }
-                svg:hover{
-                    transform: scale(1.2);
-                    color: $color-secondary;
-                    fill: $color-secondary;
-                }
-
-            }
-        }
-    }
-}
-
 .btn {
     position: absolute;
     z-index: 3;
-    left: 43px;
-    right: 43px;
+    left: 0;
+    right: 0;
     bottom: 0;
     top: 0;
     display: flex;
@@ -154,158 +194,100 @@
         right: 0;
     }
 }
-@media screen and (min-width:800px){
+@media screen and (min-width:550px) {
     .container-works {
-        z-index: 1;
-        height: 100vh;
-    }
-    //     div.content-work {
-    //         height: 100%;
-    //         margin: auto;
-    //         max-width: 100%;
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    
-    .carrousels{
-        position: relative;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        width: 100%;
-        padding: 34px 0;
-        height: fit-content;
-        overflow: hidden;
-        align-items: center;
-
-        img.img-circle-W{
-            top: 0px;
-        }
-        .carou-cust{
+        div.content-work {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 80%;
             display: flex;
-            overflow: hidden;
-            max-width: 561px;
+            align-items: flex-start;
+           
         }
-        .elt {
+    }
+    .carrousels{
+        padding: 34px 0;
+        .elt, .count {
             display: flex;
             width: fit-content;
             flex: 1 0 100%;
             justify-content: center;
             transform: translateX(0px);
-        }
-    }
-    .content-txt-work {
-        flex-direction: column;
-    }
-    .title-project{
-        font-size: 24px;
-        font-weight: 600;
-        color: #F44336;
-        text-transform: capitalize;
-    }
-    .content-txt-work{
-        display: flex;
-        // max-width: 561px;
-    }
-
-    .content-work{
-        .carou{
-            height: 100%;
-            display: flex;
-            width: 100%;
-            .carou-content{
+            max-width: calc(100vw - 150px);
+            .max-img{
                 position: relative;
-                width: 100%;
-                display: flex;
             }
-            .list-techno-carou{
-                display: none; //ADEL
-                // display: flex;
-                padding-left: 5px;
-                .tec{
-                    background: #928A97;
-                    color: white;
-                    font-size: 14px;
-                    margin-right: 20px;
-                    border-radius: 3px;
-                    display: flex;
-                    height: 40px;
-                    text-transform: uppercase;
-                    align-items: center;
-                    padding: 0 16px;
-
-                }
-            }.site-code{
-                display: flex;
-                width: 88.9px;
-                margin-top: 48px;
-                padding-left: 5px;
-                justify-content: space-between;
-
-                .web-gh-icon, .web-site-icon{
-                    svg{
-                        color: $color-third;
-                        fill: $color-third;
-                        height: 36.3px;
-                        width: 36.3px;
+        }
+    }
+    
+}
+@media screen and (min-width:800px){
+    .container-works {
+        z-index: 1;
+        height: 100vh;
+        div.content-work {
+            max-width: 100%;
+            .carou{
+              
+                .list-techno-carou{
+                    .tec{
+                        font-size: 12px;
+                        margin-right: 8px;
+                        height: 40px;
+                        padding: 0 10px;
                     }
-                    svg:hover{
-                        transform: scale(1.2);
-                        color: $color-secondary;
-                        fill: $color-secondary;
-                    }
-
                 }
             }
         }
     }
-
-    .btn {
+    .carrousels {
+        position: relative;
+        grid-template-columns: 45% 45%;
+        width: 100%;
+        grid-template-areas: "img txt"
+                             ". barre";
+        grid-gap:0 10%;
+    }
+    .test{
         position: absolute;
-        z-index: 3;
-        left: 43px;
-        right: 43px;
-        bottom: 0;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: fit-content;
-        margin: auto;
-        button{
-            cursor: pointer;
-            border: none;
-            border-radius: 35px  0 0 35px;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        grid-area: barre;
+    }
 
-            background: $color-third;
-            width: 100px;
-            height: 60px;
-            color: white;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 200ms ease-in-out;
-            &:hover {
-                width: 150px;
-
-                padding-right: 60px;
-                background: $color-secondary;
+    .barre-content, .count{
+        display: initial;
+    }
+   
+}
+@media screen and(min-width:1100px) {
+    .container-works {
+        div.content-work {
+            .carou{
+                .site-code{
+                    margin-top: 48px;
+                }
+                .list-techno-carou{
+                    .tec{
+                        font-size: 14px;
+                        margin-right: 15px;
+                        height: 40px;
+                    }
+                }
             }
-
-            svg{
-                height: 100%;
-                width: 100%;
-            }
-
         }
-        .btn-prev{
-            transform: rotate(180deg);
-            position: absolute;
-            left: 0;
+    }
+    .test{
+        bottom: 37px;
+    }
+    
+}
+@media screen and(min-width:1500px) {
 
-        }.btn-next{
-            position: absolute;
-            right: 0;
-        }
+    
+    img.img-circle-W.img-article-circle {
+        top: 65px;
+        left: 97px;
     }
 }

@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 export const slideTo = (elt, direction='left', delay, duration) => {
     let X,Y,declancheur;
-    let TO;
+    
     switch(direction){
         case'left':
             X = 600;
@@ -41,7 +41,7 @@ export const slideTo = (elt, direction='left', delay, duration) => {
         },
         {
             opacity:1,
-            x: TO || 0,
+            x: 0,
             y:0,
             delay: delay || 0.2,
             duration: duration || 0.6,
@@ -70,11 +70,11 @@ export const slidetoCarouselLeft = (elt,  count, arr, setL, setR, widthSlide, op
         
         gsap.fromTo(elt, {
             x: X * (count),
-            opacity: op ||1
+            opacity: op ||0.26
         },{
             x:X*(count+1),
             delay:0.1,
-            duration:.7,
+            duration:.55,
             opacity:1,
             ease: "back.inOut(1)"
         })
@@ -95,11 +95,11 @@ export const slidetoCarouselRight = (elt,  count, arr, setL, setR, widthSlide, o
 
         gsap.fromTo(elt, {
            x: X * (count),
-           opacity: op || 1
+           opacity: op || .26
         },{
            x:X*(count-1),
            delay:0.1,
-           duration:.7,
+           duration:.55,
            opacity:1,
            ease: "back.inOut(1)"
    

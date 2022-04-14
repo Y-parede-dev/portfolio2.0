@@ -1,0 +1,22 @@
+.links{
+
+    ul{
+        display: flex;
+        li{
+            width: 42.84px;
+            height: 42.84px;
+            border-radius: 50%;
+            margin: 0 20.55px 0 0;
+            background: $color-third;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                display: contents;
+                svg{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

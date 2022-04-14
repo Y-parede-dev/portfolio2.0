@@ -1,13 +1,16 @@
 import backFooter from '../../assets/backDesign/footer.svg'
+import { Links } from '../widget/Links'
 import { Contact } from './Contact'
-export const Footer = (props) => {
+export const Footer = () => {
     return (
         <footer className='footer'>
             <div className="footer-content content-cust">
                 <Contact />
                 <img src={backFooter} alt="fond footer" className="footer-img" />
                 <div className='meta-footer'>
-                    <p>©️ Magin code 2022</p>
+                    <p className='designer'>Travail celons l'exélante maquette de <a href='https://www.linkedin.com/in/akhiltj/' target='_blank' rel='noreferrer' > Akhil T J </a></p>
+                    <Links/>
+                    <p>Tout droits réservé ©️ Magin code 2022</p>
                 </div>
             </div>
         </footer>

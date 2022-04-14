@@ -87,45 +87,42 @@ nav{
         text-transform: capitalize;
         font-weight: 600;
         color: $color-primary;
-        font-size: 24px;
+        font-size: 19px;
     }
-    ul{
-        display: flex;
-        li{
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            margin: 0 5px;
-            background: $color-third;
-        }
-    }
+    
 }
 @media screen and (min-width: 500px) {
    
-            li.nav-list-elt{
-                button{
+    li.nav-list-elt{
+        button{
 
-                    
-                    &::after{
-                        content:url('../../../assets/backDesign/NavFocus.svg');
-                        position: absolute;
-                        top: -160px;
-                        left:initial;
-                        z-index: -1;
-                        transition: 300ms ease-in ;
-                        opacity: 0;
-                    }
-                    &:hover{
-                        background: transparent;
-                        border-radius: initial;
-                        &::after{
-                            top: -22px;
-                            transition: 300ms ease-in-out ;
-                            opacity: 1;
-                        }
-                    }
+            
+            &::after{
+                content:url('../../../assets/backDesign/NavFocus.svg');
+                position: absolute;
+                top: -160px;
+                left:initial;
+                z-index: -1;
+                transition: 300ms ease-in ;
+                opacity: 0;
+            }
+            &:hover{
+                background: transparent;
+                border-radius: initial;
+                &::after{
+                    top: -22px;
+                    transition: 300ms ease-in-out ;
+                    opacity: 1;
                 }
             }
+        }
+    }
+    .data-start{
+        h2{
+            font-size: 24px;
+        }
+        
+    }
       
 }
 @media screen and (min-width: 800px) {
@@ -151,7 +148,7 @@ nav{
     }
     
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1150px) {
     .header-principal {
         // position: relative;
         // top: 0;
@@ -196,7 +193,7 @@ nav{
         left: 0px;
         right: auto;
         padding: 0;
-        width: calc(120px);
+        width: calc(170px);
         transition: 200ms ease-out;
         overflow: hidden;
         ul{
@@ -238,7 +235,7 @@ nav{
                     transition: 300ms ease-in-out ;
                     opacity: 1;
                     &::after{
-                        left: -15px;
+                        left: -40px;
                         transition: 300ms ease-in-out ;
                     }
                 }
@@ -260,10 +257,9 @@ nav{
         // left: 0;
         // right: 0;
         // height: 100vh;
-        padding: 0 150px;
+        padding: 0 105px;
         width: calc(100% - 300px);
     }
-    
     nav{
         top: 0px;
         bottom: initial;
@@ -273,13 +269,16 @@ nav{
         ul{
             justify-content: left;
             width: fit-content;
+            :first-child{
+                padding-left: 15px;
+            }
             li.nav-list-elt{
+                
                 button{
-                   
                     font-size: 18px;
-                   
-                    width: 152px;
+                    width: fit-content;
                     height: 111px;
+                    padding: 10px 40px 10px 35px;
                     &::after{
                         left:13px;
                     }
@@ -299,7 +298,8 @@ nav{
         right: auto;
         padding: 0;
         margin: auto;
-        width: fit-content;
+        min-width: fit-content;
+        width: 12vw;
         transition: 200ms ease-out;
         overflow: hidden;
         ul{
@@ -341,7 +341,7 @@ nav{
                     transition: 300ms ease-in-out ;
                     opacity: 1;
                     &::after{
-                        left: -15px;
+                        left: 15px;
                         transition: 300ms ease-in-out ;
                     }
                 }

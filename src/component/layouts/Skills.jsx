@@ -28,14 +28,15 @@ export const Skills = (props) => {
                 </div>
                 <div className="skills-content-meta content-art">
                     <div className="tilte-txt-skills">
-                        <h2 className="title-skills title-art">Skills</h2>
-                        <p className="txt-art txt-skills">I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.</p>
+                        <h2 className="title-skills title-art">Compétences</h2>
+                        <p className="txt-art txt-skills">J'ai appris le développement Web avec HTML5, Css3 et Javascript. Ensuite, je me suis formé sur React Js car il est le "Framework" le plus adapter à ma façon de travailler.</p>
                     </div>
                     <div className="skills-techno">
                         <ul className="skills-list">
                         {TechnoArr.map((e)=>(
                             <li key={`${e.id}`} className={`skills-list-items ${e.className}`}>
-                                <e.logo alt={`logo ${e.name}`} className={`logo logo-${e.name}`}/>
+                                <e.logo alt={`logo ${e.className}`} className={`logo logo-${e.className}`}/>
+                                {/* <p style={{width:'max-content'}}>{e.name}</p> */}
                             </li>
                         ))}
                         </ul>

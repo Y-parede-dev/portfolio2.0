@@ -9,7 +9,7 @@ const Plantapik = new Project(
     'plantapik',
     `https://plantapik.com`,
     plantapik,
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
+    "Plantapik est m'a première réalisation après avoir terminé la formation de développeur web d'OpenClassRooms, travail avec le CMS Prestashop.",
     ['html', 'css', 'smarty (php)', 'prestashop'],
     false,
     true
@@ -20,7 +20,7 @@ const Magin = new Project(
     'magin-code',
     `https://magin-code.fr`,
     magin, 
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ", 
+    "L'ancienne version de mon portfolio, je continue à l'héberger sur netlify, dans un but éducatif.", 
     ['html', 'css', 'js','react', 'node']
     ,false,
     true
@@ -30,7 +30,7 @@ const Therapies = new Project(
     'therapies-breves',
     `https://therapiesbrevessnathalie.com`,
     therapies, 
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ", 
+    "Thérapies Brèves Colomiers est une de mes dernierre réalisation, j'ai moi même créer la maquette du site.", 
     ['html', 'css', 'js','react', 'firebase'],
     false,
     true
@@ -38,10 +38,10 @@ const Therapies = new Project(
 const PortFolio = new Project(
     4,
     'PortFolio',
-    `https://therapiesbrevessnathalie.com`,
+    `https://magin-code.fr`,
     portfolio, 
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ", 
-    ['html', 'css', 'js','react', 'firebase'],
+    "Le portfolio que vous êtes en train de parcourir, il est actuellement ma dernière réalisation.", 
+    ['html', 'css', 'js','react'],
     true,
     true,
     'https://github.com/Y-parede-dev/portfolio2.0'

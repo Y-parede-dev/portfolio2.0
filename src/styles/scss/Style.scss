@@ -9,6 +9,7 @@
 @import 'layout/Works';
 @import 'layout/Footer';
 @import 'layout/Contact';
+@import 'layout/Links';
 
 *{
   font-family: 'spartan', sans-serif;
@@ -122,10 +123,14 @@ p.txt-art {
 
     div.content-cust {
       height: calc(100vh - 84px);
-    // height: 100vh;
-    margin: auto;
-    max-width: 80%;
+      // height: 100vh;
+      margin: 0 auto;
+      max-width: 80%;
+    }
   }
+.img-all{
+  max-width: 45vw;
+
 }
 
 }
@@ -157,7 +162,7 @@ p.txt-art {
   p.txt-art {
     margin: 20px 0;
     line-height: 1.75;
-    font-size: 24px;
+    font-size: 20px;
   }
   .img-all{
     max-width: 100%;
@@ -165,6 +170,12 @@ p.txt-art {
   }
 
 }
+@media screen and (min-width:1000px) {
+  p.txt-art {
+    font-size: 24px;
+  }
+}
+
 @media screen and (min-width:1500px) {
   .container {
     width: calc(100% - 300px);

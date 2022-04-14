@@ -3,95 +3,99 @@ import { slideTo, slidetoCarouselLeft, slidetoCarouselRight } from "../../config
 import { useEffect, useState } from "react"
 import{AiFillGithub, AiOutlineArrowRight} from 'react-icons/ai'
 import{CgWebsite} from 'react-icons/cg'
-
 export const Works = (props) => {
-    const[arrLeft, setArrLeft] = useState(false)
-    const[arrRight, setArrRight] = useState(true)
+    const [arrLeft, setArrLeft] = useState(false)
+    const [arrRight, setArrRight] = useState(true)
     const [save, setSave] = useState(0)
     const [widthSlide, setWidthSlide] = useState(0)
-
+    let idBarre
     let countMax = ProjectArr.length-1
-   
+    
     const btnT = (direction) => {
-        // console.log(document.getElementById(`elt-1`).offsetWidth)
          setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
          if(widthSlide===0){
-             return alert('PD')
+             return alert('Pas bon')
          }
          if(direction==='right'){
             if(save<countMax){
                 setSave(save+1)
             }
-            console.log(`taille de la slide : ${widthSlide}`)
-            // console.log(widthSlide)
-
             slidetoCarouselLeft(`.elt`,  save, ProjectArr, setArrLeft, setArrRight, widthSlide)
-
+            // idBarre.className=`barre-active barre barre-${save+1}`
         }
-        // setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
         if(direction === "left"){
-            
             setSave(save-1)
             slidetoCarouselRight(`.elt`, save, ProjectArr, setArrLeft, setArrRight, widthSlide)
+            idBarre.className=`barre barre-${save+1}`
         }
     }
     useEffect(()=>{
-        let ele= document.getElementsByClassName('elt') 
+        const timer = setTimeout(()=>{
+            setWidthSlide(document.getElementById(`elt-1`).offsetWidth )
+        },0) //<-- 0 millisecondes ....
+        return(()=>{
+            clearTimeout(timer)
+        })
+    },[widthSlide])
+    useEffect(()=>{
+        let ele= document.getElementsByClassName('elt')
+        let ctxw = document.getElementById('ctxw')
         if(widthSlide>0){
-
+            ctxw.style.width= widthSlide+'px'
+            ctxw.style.margin= "auto"
             for(let i =0; i<ele.length;i++){
-                ele[i].style.maxWidth= widthSlide+'px'
+                ele[i].style.width= widthSlide+'px'
+                ele[i].style.margin= "auto"
             }
         }
     },[widthSlide])
     useEffect(()=>{
-        const timer = setTimeout(()=>{
-            setWidthSlide(document.getElementById(`img-carou`).offsetWidth )
-            
-        },100) //<-- 0 millisecondes ....
-        return(()=>{
-            clearTimeout(timer)
-        })
-
-    },[widthSlide])
+  
+        idBarre = document.getElementById(save+1)
+        if(save+1 === parseInt(idBarre.id)){
+            idBarre.className=`barre-active barre barre-${save+1}`
+        }
+        else{
+            idBarre.className=`barre barre-${save+1}`
+        }
+        // if(save+1 === ){
+        // }
+    },[save, idBarre])
     useEffect(()=>{
         slideTo(".content-txt-work", 'left')
     },[])
     useEffect(()=>{
         slideTo('.img-circle-W',"top", .5)
     },[])
-    
     useEffect(()=>{
         slideTo(".carou-img", 'bottom', .35)
     },[])
-   
     return(
         <div className="container-works container">
             <div className="content-work">
+                <div id="t" className="carrousels">
                  <img src={props.circlePink} className='img-circle-W img-article-circle ' alt='circle design'/>
-                <div className="carrousels">
                     <div id="img-carou" className="carou-img carou-cust">
-                        {ProjectArr.map((e)=>(                        
+                        {ProjectArr.map((e)=>(
                             <div id={`elt-${e.id}`} key={`${e.id}-img`} className={`content-img elt `}>
-                                <div className="btn">{arrRight ?
-
-                                    <button title="projet suivant" className="btn-next"onClick={()=>btnT('right')}><AiOutlineArrowRight alt='fleche suivant'/></button>
-                                    :
-                                    ""
-                                }
-                                </div>
-                                <div className="btn">{arrLeft ?
-
-                                    <button title="projet précédent" className="btn-prev" onClick={()=>btnT('left')}><AiOutlineArrowRight alt='fleche précédent'/></button>
-                                    :""
-                                }
+                                <div className="max-img">
+                                    <div className="btn">{arrRight ?
+                                        <button title="projet suivant" className="btn-next"onClick={()=>btnT('right')}><AiOutlineArrowRight alt='fleche suivant'/></button>
+                                        :
+                                        ""
+                                    }
                                     </div>
-                                <img alt="mes projets" id={`img-carou-${e.id}`} className="img-project img-all" src={e.img}/>
-                                 
-                            </div>
+                                    <div className="btn">{arrLeft ?
+                                        <button title="projet précédent" className="btn-prev" onClick={()=>btnT('left')}><AiOutlineArrowRight alt='fleche précédent'/></button>
+                                        :""
+                                    }
+                                        </div>
+                                    <img alt="mes projets" id={`img-carou-${e.id}`} className="img-project img-all" src={e.img}/>
+                                </div>
+                            </div>                       
                         ))}
                     </div>
-                    <div className="content-txt-work-container">
+                    <div id='ctxw' className="content-txt-work-container">
                         <h2 className="title-works title-art">works</h2>
                         <div className="carou carou-cust">
                             {ProjectArr.map((e)=>(
@@ -139,11 +143,23 @@ export const Works = (props) => {
                                         </a>
                                     </div>
                                 </div>}
-                                    
+                                <div className="count carou-cust">
+                                    <p >0{e.id}</p>  
                                 </div>
+                               
+                            </div>
                             ))}
                         </div>    
                     </div>
+                    <div className="test">
+                        {ProjectArr.map((ei)=>(
+                            <div className="barre-content">
+                                <div key={`barre-${ei.id}`} id={ei.id} className={`barre barre-${ei.id}`}></div>
+                            </div>
+                            ))
+                        }          
+                    </div>
+                    
                 </div>
             </div>
             

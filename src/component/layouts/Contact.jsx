@@ -21,7 +21,7 @@ export const Contact = () => {
             to_name:"Yoan"
         }
         emailjs.send(REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID, formInit, REACT_APP_EMAILJS_USER_ID)
-          .then((result) => {
+          .then(() => {
               resetInit()
           }, (error) => {
               alert(error.text)
@@ -29,14 +29,14 @@ export const Contact = () => {
           });
       }
     return (
-        <div className='ctc'>
-            <h2 className='tilte-contact title-art'>Get in Touch</h2>
-            <h3 className='drop-me'>Drop me a line.
-                I would like to hear from you.</h3>
+        <div id='contact' className='ctc'>
+            <h2 className='tilte-contact title-art'>Contact</h2>
+            <h3 className='drop-me'>Avez-vous une question ?
+                                    n'hésitez pas à m'écrire quelques lignes.</h3>
             <form ref={formRef} onSubmit={sendEmail} className="contact-form">
                 <div className="form-elt">
                     <input onChange={(e)=>setName(e.target.value)} id='Name' type="text" name="user_name" required/>
-                    <label className='lbl lbl-nom' htmlFor='Name'>{name<1?"Name":""}</label>
+                    <label className='lbl lbl-nom' htmlFor='Name'>{name<1?"Nom/Prénom":""}</label>
                 </div>
                 <div className="form-elt">
                     <input onChange={(e)=>setEmail(e.target.value)} id='Name' type="email" name="user_email" required/>
@@ -46,7 +46,7 @@ export const Contact = () => {
                     <textarea onChange={(e)=>setMessage(e.target.value)} id='Message' name="message" required minLength={5}/>
                     <label className='lbl lbl-mess' htmlFor='Message'>{message<1?'Message':''}</label>
                 </div>
-                <input title="cliquer pour m'envoyé un email" className='btn-form' type="submit" value="Envoyer Message" />
+                <input title="cliquer pour m'envoyé un email" className='btn-form' type="submit" value="Envoyer le message" />
             </form>
         </div>
         
