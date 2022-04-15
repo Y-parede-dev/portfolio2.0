@@ -36,8 +36,10 @@
                 padding: 15px 0;
             }
         }
+
         .FaHtml5{
             grid-area: html;
+
         }.FaCss3Alt{
             grid-area: css;
         }.FaJsSquare{
@@ -58,7 +60,7 @@
     }
 }
 .img-circle {
-    right: -1px;
+    right: -45px;
 }
 @media screen and (min-width:800px) {
     div.container{
@@ -72,6 +74,7 @@
                 justify-content: space-between;
             }
             .skills-list {
+               
                 grid-gap: 40px 0;
                 li.skills-list-items{
                     display: flex;
@@ -89,16 +92,19 @@
             }
         }
     }
-    .img-circle {
-        right: -45px;
-    }
 }
 @media screen and (min-width:1000px) {
     .container{
         div.skills-content{
             div.skills-content-meta{
+                grid-area: txt;
                 padding-right: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
+            
         }
     }
+    
 }

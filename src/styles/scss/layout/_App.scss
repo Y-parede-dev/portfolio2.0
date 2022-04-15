@@ -11,8 +11,21 @@
     color: #61dafb;
   }
 }
+
+@media screen and (min-width:800px) {
+  .App {
+    height: 100%;
+   // width: 95%;
+    // max-width: 80%;
+    margin: auto;
+    text-align: center;
+    background: $color-primary;
+    overflow-x: hidden;
+  }
+}
 @media screen and (min-width:1000px) {
   .App {
+   
     width: 90%;
     margin-right: 0;
   }
