@@ -13,13 +13,12 @@ footer{
         flex-direction: column;
         width: 100%;
     }
-
     img{
         z-index: -1;
         top: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        height:100vh;
         position: absolute;
     }
     div.meta-footer {
@@ -29,10 +28,11 @@ footer{
         align-items: center;
         justify-content: space-evenly;
         height: 215px;
-        // padding: 112.5px 0;
         bottom: 0px;
         left: 0;
         width: 100%;
+        padding-bottom: 80px;
+        padding-top: 16px;
         background: $color-secondary;
         ul{
             li{
@@ -46,11 +46,18 @@ footer{
         }
         .designer {
             font-size: 18px;
-
+            padding: 0 5px;
             font-weight: 600;
             a{
                 color: $color-h2;
             }
+        }
+    }
+}
+@media screen and (min-width: 1150px) {
+    footer{
+        div.meta-footer {
+            padding-bottom: initial;
         }
     }
 }

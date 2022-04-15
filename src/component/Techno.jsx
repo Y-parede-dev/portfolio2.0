@@ -7,19 +7,9 @@ export const TechnoArr = []
 const tec = [{ref:"FaHtml5",name:'HTML 5'}, {ref:"FaCss3Alt",name:'CSS 3'},{ref:"FaJsSquare",name:'JavaScript'}, {ref:"FaReact",name:'React Js'},{ref:"FaNodeJs",name:'Node Js'} ,{ref:"SiExpress",name:'Express Js'} ,{ref:"SiMysql",name:'MySQL'} ]
 const logo = [FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, SiExpress, SiMysql]
 let id = 0;
-
 tec.forEach((e)=>{
     let ic = logo[id] 
     id++
-    // for(let i;i<tec.length;i++){
-
-    // }
-    // ic = logo.find(er=>{
-       
-    //     if(e === er.name) {
-    //         return er}}
-    // )
-    
     const el = new IterTechno(
         id,
         e.name,

@@ -2,10 +2,7 @@ import { useEffect } from "react"
 import pcImg from "../../assets/images/TEST/pc.png"
 import { TechnoArr } from "../Techno"
 import { slideTo } from "../../config/GSAP.config"
-
-
 export const Skills = (props) => {
-    
     useEffect(()=>{
         slideTo('.skills-content-meta', "right",.1)
     },[])
@@ -18,7 +15,6 @@ export const Skills = (props) => {
     useEffect(()=>{
         slideTo('.img-circle', "top", .5)
     },[])
-    
     return(
         <div className="container-skills container">
             <div className="skills-content content-cust">
@@ -36,12 +32,10 @@ export const Skills = (props) => {
                         {TechnoArr.map((e)=>(
                             <li key={`${e.id}`} className={`skills-list-items ${e.className}`}>
                                 <e.logo alt={`logo ${e.className}`} className={`logo logo-${e.className}`}/>
-                                {/* <p style={{width:'max-content'}}>{e.name}</p> */}
                             </li>
                         ))}
                         </ul>
                     </div>
-
                 </div>
             </div>
             <img src={props.backgroundImg} alt="fond" className="back-img-skills img-article" />

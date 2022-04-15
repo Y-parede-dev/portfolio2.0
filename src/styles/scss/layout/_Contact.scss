@@ -9,7 +9,6 @@
     grid-gap: 32px 64px;
     grid-template-columns: 1fr  ;
     grid-template-rows: 0.1fr 0.2fr 1.7fr  ;
-
     grid-template-areas: 'title'
                          'drop'
                          'form';
@@ -18,9 +17,8 @@
     }
     .drop-me{
         margin: auto;
-
         grid-area: drop;
-        font-size: 19px;
+        font-size: 23px;
         font-weight: 600;
         text-align: left;
     }
@@ -42,7 +40,6 @@ form.contact-form {
             color: $color-third;
             z-index: 3;
             position: absolute;
-            
         }
         label:hover +input{
             opacity: 0;
@@ -76,27 +73,60 @@ form.contact-form {
 .noneD {
     opacity: 0;
 }
-
+.modale-valid{
+    z-index: 52;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    backdrop-filter: brightness(0.6);
+    div {
+        position: relative;
+        margin: auto;
+        background-color: white;
+        height: max-content;
+        width: fit-content;
+        padding: 30px;
+        padding-top: 60px;
+        button{
+            background: red;color:white; border:none; border-Radius: 8px;
+            font-size: 2rem;
+            padding: 3px;
+            padding-top: 5px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
 @media screen and (min-width:800px){
     .ctc{
         padding: 38px;
-        
         grid-gap: 32px;
-        grid-template-columns: 0.6fr 1.4fr  ;
+        grid-template-columns: 0.8fr 1.6fr  ;
         grid-template-rows: 0.1fr 1.9fr  ;
-    
         grid-template-areas: 'drop title'
                              'drop form';
-        .tilte-contact{
-           
-        }.drop-me{
-           
-            font-size: 38px;
-            font-weight: 600;
+      .drop-me{
+            font-size: 25px;
         }
     }
-    // form.contact-form {
-    //     height: 100%;
-    //     width: 100%;
-    // }
+}
+@media screen and (min-width:999px){
+    .ctc{
+        grid-template-columns: 0.6fr 1.4fr  ;
+
+      .drop-me{
+            font-size: 29px;
+        }
+    }
+}
+@media screen and (min-width:1424px){
+    .ctc{
+      .drop-me{
+            font-size: 38px;
+        }
+    }
 }

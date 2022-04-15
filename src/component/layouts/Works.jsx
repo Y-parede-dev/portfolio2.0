@@ -10,7 +10,6 @@ export const Works = (props) => {
     const [widthSlide, setWidthSlide] = useState(0)
     let idBarre
     let countMax = ProjectArr.length-1
-    
     const btnT = (direction) => {
          setWidthSlide(document.getElementById(`elt-1`).offsetWidth)
          if(widthSlide===0){
@@ -21,7 +20,6 @@ export const Works = (props) => {
                 setSave(save+1)
             }
             slidetoCarouselLeft(`.elt`,  save, ProjectArr, setArrLeft, setArrRight, widthSlide)
-            // idBarre.className=`barre-active barre barre-${save+1}`
         }
         if(direction === "left"){
             setSave(save-1)
@@ -32,7 +30,7 @@ export const Works = (props) => {
     useEffect(()=>{
         const timer = setTimeout(()=>{
             setWidthSlide(document.getElementById(`elt-1`).offsetWidth )
-        },0) //<-- 0 millisecondes ....
+        },0)
         return(()=>{
             clearTimeout(timer)
         })
@@ -50,7 +48,6 @@ export const Works = (props) => {
         }
     },[widthSlide])
     useEffect(()=>{
-  
         idBarre = document.getElementById(save+1)
         if(save+1 === parseInt(idBarre.id)){
             idBarre.className=`barre-active barre barre-${save+1}`
@@ -58,8 +55,6 @@ export const Works = (props) => {
         else{
             idBarre.className=`barre barre-${save+1}`
         }
-        // if(save+1 === ){
-        // }
     },[save, idBarre])
     useEffect(()=>{
         slideTo(".content-txt-work", 'left')
@@ -80,23 +75,18 @@ export const Works = (props) => {
                             <div id={`elt-${e.id}`} key={`${e.id}-img`} className={`content-img elt `}>
                                 <div className="max-img">
                                     <div className="btn">{arrRight ?
-                                        <button title="projet suivant" className="btn-next"onClick={()=>btnT('right')}><AiOutlineArrowRight alt='fleche suivant'/></button>
-                                        :
-                                        ""
-                                    }
-                                    </div>
+                                        <button title="projet suivant" className="btn-next"onClick={()=>btnT('right')}><AiOutlineArrowRight alt='fleche suivant'/></button>:""
+                                    }</div>
                                     <div className="btn">{arrLeft ?
-                                        <button title="projet précédent" className="btn-prev" onClick={()=>btnT('left')}><AiOutlineArrowRight alt='fleche précédent'/></button>
-                                        :""
-                                    }
-                                        </div>
+                                        <button title="projet précédent" className="btn-prev" onClick={()=>btnT('left')}><AiOutlineArrowRight alt='fleche précédent'/></button>:""
+                                    }</div>
                                     <img alt="mes projets" id={`img-carou-${e.id}`} className="img-project img-all" src={e.img}/>
                                 </div>
                             </div>                       
                         ))}
                     </div>
                     <div id='ctxw' className="content-txt-work-container">
-                        <h2 className="title-works title-art">works</h2>
+                        <h2 className="title-works title-art">Réalisation</h2>
                         <div className="carou carou-cust">
                             {ProjectArr.map((e)=>(
                                 <div key={`${e.id}-txt`} className="content-art content-txt-work elt">
@@ -143,26 +133,20 @@ export const Works = (props) => {
                                         </a>
                                     </div>
                                 </div>}
-                                <div className="count carou-cust">
-                                    <p >0{e.id}</p>  
-                                </div>
-                               
                             </div>
                             ))}
                         </div>    
                     </div>
-                    <div className="test">
+                    <div className="barre-container">
                         {ProjectArr.map((ei)=>(
-                            <div className="barre-content">
-                                <div key={`barre-${ei.id}`} id={ei.id} className={`barre barre-${ei.id}`}></div>
+                            <div key={`barre-${ei.id}`} className="barre-content">
+                                <div id={ei.id} className={`barre barre-${ei.id}`}></div>
                             </div>
                             ))
                         }          
                     </div>
-                    
                 </div>
             </div>
-            
         </div>
     )
 }

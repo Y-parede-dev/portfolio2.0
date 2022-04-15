@@ -27,7 +27,6 @@ export const AboutMe = (props) => {
                     <h2 className="about-title title-art">À propos de moi</h2>
                     <p id='t' className="about-text txt-art">Un développeur web curieux, passionné, cherchant à tirer parti de solides compétences en développement en mettant l'accent sur la collaboration, la communication et la passion.</p>
                     <button className="about-btn"><a title="Cliquer pour télécharger mon CV au format PDF" href={cv} download>télécharger CV</a></button>
-
                 </div>
             </div>
             <img alt='Fond' className="img-about-up" src={props.backgroundImg} />

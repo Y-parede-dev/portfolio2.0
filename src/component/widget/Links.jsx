@@ -2,8 +2,6 @@ import {FaFacebookF} from 'react-icons/fa'
 import {FaLinkedinIn} from 'react-icons/fa'
 import {FaDiscord} from 'react-icons/fa'
 import {ImYoutube2} from 'react-icons/im'
-
-
 export const Links = () =>{
     return (
         <div className="links">

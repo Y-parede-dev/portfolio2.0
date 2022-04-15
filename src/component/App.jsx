@@ -10,20 +10,16 @@ import { gsap} from 'gsap'
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
-
 export const App =()=>{
-    // console.log(window.pageYOffset)
     const aboutRef = useRef()
     const [onmobile, setOnMobile] = useState(false)
     const seizeChange = 1000
-    
     useEffect(()=>{
         if(window.innerWidth<seizeChange){
             setOnMobile(true)
         }
         return(()=>setOnMobile(false))
     },[])
-
     return(
         <div className="App">
             <Header

@@ -1,9 +1,8 @@
-import plantapik from'../assets/images/TEST/plantapik.png'
-import magin from'../assets/images/TEST/magin.png'
-import therapies from'../assets/images/TEST/therapies.png'
-import portfolio from'../assets/images/TEST/portFolio.png'
+import plantapik from'../assets/images/TEST/plantapik.webp'
+import magin from'../assets/images/TEST/magin.webp'
+import therapies from'../assets/images/TEST/therapies.webp'
+import portfolio from'../assets/images/TEST/portFolio.webp'
 import { Project} from '../libs/MaginJS'
-
 const Plantapik = new Project(
     1,
     'plantapik',
@@ -18,7 +17,7 @@ const Plantapik = new Project(
 const Magin = new Project(
     2,
     'magin-code',
-    `https://magin-code.fr`,
+    `https://magin-code-old.netlify.app/`,
     magin, 
     "L'ancienne version de mon portfolio, je continue à l'héberger sur netlify, dans un but éducatif.", 
     ['html', 'css', 'js','react', 'node']
@@ -30,7 +29,7 @@ const Therapies = new Project(
     'therapies-breves',
     `https://therapiesbrevessnathalie.com`,
     therapies, 
-    "Thérapies Brèves Colomiers est une de mes dernierre réalisation, j'ai moi même créer la maquette du site.", 
+    "Thérapies Brèves Colomiers est une de mes dernières réalisations, j'ai moi-même créer la maquette du site.", 
     ['html', 'css', 'js','react', 'firebase'],
     false,
     true
@@ -40,7 +39,7 @@ const PortFolio = new Project(
     'PortFolio',
     `https://magin-code.fr`,
     portfolio, 
-    "Le portfolio que vous êtes en train de parcourir, il est actuellement ma dernière réalisation.", 
+    "Le portfolio que vous êtes en train de parcourir, c'est actuellement ma dernière réalisation.", 
     ['html', 'css', 'js','react'],
     true,
     true,

@@ -5,7 +5,6 @@
     left: -1px;
     right: 0;
     height: calc(100vh - 92px);
-    //padding: 0 150px;
     width: calc(100%);
 }
 .img-back-head {
@@ -39,7 +38,6 @@ nav{
                 align-items: center;
                 justify-content: center;
                 color: $color-third;
-             
                 padding: 10px;
                 background-color: transparent;
                 transition: 300ms ease-in ;
@@ -55,7 +53,6 @@ nav{
                     transition: 300ms ease-in-out ;
                     background: white;
                     border-radius: 50%;
-                    
                 }
             }
         }
@@ -89,18 +86,14 @@ nav{
         color: $color-primary;
         font-size: 19px;
     }
-    
 }
 @media screen and (min-width: 500px) {
-   
     li.nav-list-elt{
         button{
-
-            
             &::after{
                 content:url('../../../assets/backDesign/NavFocus.svg');
                 position: absolute;
-                top: -160px;
+                top: 160px;
                 left:initial;
                 z-index: -1;
                 transition: 300ms ease-in ;
@@ -121,13 +114,10 @@ nav{
         h2{
             font-size: 24px;
         }
-        
     }
-      
 }
 @media screen and (min-width: 800px) {
     .header-principal {
-      
         padding: 0 100px;
         width: calc(100% - 200px);
     }
@@ -150,33 +140,25 @@ nav{
 }
 @media screen and (min-width:1150px) {
     .header-principal {
-        // position: relative;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // height: 100vh;
         padding: 0 150px;
         width: calc(100% - 300px);
     }
-    
     nav{
         top: 0px;
         bottom: initial;
         padding: 0 80px;
         max-width: calc(1440px - 160px);
-        // transition: 200ms ease-in;
         ul{
             justify-content: left;
             width: fit-content;
             li.nav-list-elt{
                 button{
-                   
                     font-size: 18px;
-                   
                     width: 152px;
                     height: 111px;
                     &::after{
                         left:13px;
+                        top: -160px;
                     }
                     &:hover{
                         &::after{
@@ -217,13 +199,11 @@ nav{
                 width: fit-content;
                 height: 111px;
                 padding: 0;
-               
                 transition: 300ms ease-in ;
                 &::after{
                     content:url('../../../assets/backDesign/NavFocus.svg');
                     position: absolute;
                     top: 0;
-    
                     left: -160px;
                     z-index: -1;
                 }
@@ -248,15 +228,9 @@ nav{
             margin: 0;
         }
     }
-    
 }
 @media screen and (min-width:1440px) {
     .header-principal {
-        // position: relative;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // height: 100vh;
         padding: 0 105px;
         width: calc(100% - 300px);
     }
@@ -265,7 +239,6 @@ nav{
         bottom: initial;
         padding: 0 80px;
         max-width: calc(1440px - 160px);
-        // transition: 200ms ease-in;
         ul{
             justify-content: left;
             width: fit-content;
@@ -354,5 +327,4 @@ nav{
             margin: 0;
         }
     }
-    
 }

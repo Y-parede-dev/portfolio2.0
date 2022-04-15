@@ -12,7 +12,6 @@
                         'pic';
     height: 100%;
     align-items: center;
-
     div.about-txt{
         grid-area: txt;
         padding-left: 0px;
@@ -29,7 +28,6 @@
         a{
             font-size: 16px;
             padding: 20px;
-            
         }
     }
     .image-design-back {
@@ -38,50 +36,19 @@
         top: -34px;
         z-index: -1;
     }
-    // img.image-about-developpeur {
-    //     /* height: 50%; */
-    //     max-width: 70vw;
-    // }
-    
 }
-
 @media screen and (min-width:800px){
     div.About-container{
-
         .about-content {
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 'pic txt';
-        
             div.about-txt{
-                grid-area: txt;
                 margin-left: 50px;
             }
-            button.about-btn{
-                text-transform: capitalize;
-                font-weight: 500;
-                border-radius: 8px;
-                border: none;
-                background: $color-secondary;
-                color: white;
-                height: 40px;
-                a{
-                    font-size: 16px;
-                    padding: 20px;
-                    
-                }
-            }
             .image-design-back {
-                position: absolute;
                 left: -45px;
-                top: -34px;
-                z-index: -1;
             }
-            // img.image-about-developpeur {
-            //     /* height: 50%; */
-            //     max-width: 100%;
-            // }
-            
         }
     }
 }
