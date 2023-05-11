@@ -1,6 +1,9 @@
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-const {REACT_APP_EMAILJS_USER_ID, REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID} = process.env
+const REACT_APP_EMAILJS_USER_ID="user_ym7j7CksbJN1yrkmvvIF5";
+const REACT_APP_EMAILJS_SERVICE_ID="service_kj7chsm";
+const REACT_APP_EMAILJS_TEMPLATE_ID="template_kwn8v9j";
+
 export const Contact = () => {
     const formRef = useRef()
     const [name, setName] = useState("")
