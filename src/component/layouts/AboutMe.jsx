@@ -1,8 +1,8 @@
-import developpeurImg from "../../assets/images/TEST/dev.docx"
+import developpeurImg from "../../assets/images/TEST/dev.png"
 import circlePink from "../../assets/images/TEST/circle.svg"
 import { useEffect, useState } from "react"
 import { slideTo } from "../../config/GSAP.config"
-import cv from "../../assets/download/CV.pdf"
+import cv from "../../assets/download/CV.docx"
 export const AboutMe = (props) => {
     const [seize, setSeize]= useState(0)
     useEffect(()=>{
