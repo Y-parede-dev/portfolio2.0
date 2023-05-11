@@ -1,4 +1,4 @@
-import developpeurImg from "../../assets/images/TEST/dev.doc"
+import developpeurImg from "../../assets/images/TEST/dev.docx"
 import circlePink from "../../assets/images/TEST/circle.svg"
 import { useEffect, useState } from "react"
 import { slideTo } from "../../config/GSAP.config"
